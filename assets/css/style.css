@@ -1,4 +1,10 @@
 * {
 	background-color: #8a8a8a;
-	color: #671818;
+	color: black;
+	text-align: center;
+
 }
+
+ #font {
+ 	font-family: 'Pacifico', cursive;
+ }

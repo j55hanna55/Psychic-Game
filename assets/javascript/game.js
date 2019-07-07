@@ -1,4 +1,4 @@
-//grabbing required element
+
 var winsValuesElement = document.querySelector("#winsValues");
 var lossesValuesElement = document.querySelector("#lossesValues");
 var guessesLeftElement = document.querySelector("#guessesLeft");
@@ -8,7 +8,7 @@ var lossesValues = 0;
 var guessesLeft = 10;
 var guessesSoFar = "";
 
-//setting intial values
+
 function init() {
     winsValuesElement.innerHTML = winsValues;
     lossesValuesElement.innerHTML = lossesValues;
@@ -16,7 +16,7 @@ function init() {
     guessesSoFarElement.innerHTML = guessesSoFar;
 }
 
-//main game loop
+
 function play() {
     if (event.key == chosenLetter) {
         winsValues = winsValues + 1;
@@ -31,7 +31,7 @@ function play() {
         if (guessesSoFar.length == 0) {
             guessesSoFar = guessesSoFar + event.key;
         } else {
-            guessesSoFar = guessesSoFar + " , " + event.key;
+            guessesSoFar = guessesSoFar + ", " + event.key;
         }
         guessesSoFarElement.innerHTML = guessesSoFar;
         guessesLeft = guessesLeft - 1;
@@ -44,7 +44,6 @@ function play() {
     }
 }
 
-//resetting the game
 function reset() {
     guessesLeft = 10;
     guessesSoFar = "";
@@ -53,14 +52,19 @@ function reset() {
     chosenLetter = generateLetter();
 }
 
-//letter generator
+
 function generateLetter() {
-    var letters = "abcdefghijklmnopqrstuvwxyz";
-    var result = letters.charAt(Math.floor(Math.random() * 25));
-    //console.log(result);
+    var letters = ('a', 'b', 'c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
+    var result = letters;
+
     return result;
 }
-//########### (execution code)
+
 init()
 var chosenLetter = generateLetter();
 document.onkeyup = play;
+
+
+
+
+   
