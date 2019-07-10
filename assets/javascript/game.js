@@ -6,7 +6,7 @@ var guessesSoFarElement = document.querySelector("#guessesSoFar");
 var winsValues = 0;
 var lossesValues = 0;
 var guessesLeft = 10;
-var guessesSoFar = "None";
+var guessesSoFar = "";
 
 
 
