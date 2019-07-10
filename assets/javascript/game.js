@@ -6,7 +6,15 @@ var guessesSoFarElement = document.querySelector("#guessesSoFar");
 var winsValues = 0;
 var lossesValues = 0;
 var guessesLeft = 10;
-var guessesSoFar = "";
+var guessesSoFar = "None";
+
+
+
+
+// function initialize(){
+//     startBtn.style.display = "none";
+//     moveCount = 3;
+// }
 
 
 function init() {
